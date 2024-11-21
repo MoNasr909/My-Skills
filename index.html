@@ -11,50 +11,79 @@
             padding: 0;
             font-family: 'Arial', sans-serif;
             overflow-x: hidden;
+            background-color: #eef2f3;
         }
+
         section {
-            padding: 50px 10%;
+            padding: 60px 5%;
             text-align: center;
             position: relative;
+            transition: background-color 0.3s ease;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
         }
+
         h1, h2 {
             margin: 0 0 20px;
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             color: #003366;
         }
+
         p {
-            font-size: 1.1rem;
-            color: #444;
+            font-size: 1.2rem;
+            color: #555;
+            line-height: 1.6;
         }
+
         a {
             text-decoration: none;
             color: #003366;
+            transition: color 0.3s;
         }
-        /* Header with Parallax */
+
+        a:hover {
+            color: #ffcc00;
+        }
+
+        /* Header Styles */
         header {
-            background-image: url('./0.webp'); /* Replace with actual background */
+            background-image: url('./0.webp');
             background-attachment: fixed;
             background-size: cover;
             background-position: center;
             height: 100vh;
-            color: white;
             display: flex;
-            flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
-            text-align: center;
+            color: white;
+            padding-left: 5%;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
         }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            margin-right: 30px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+
         header h1 {
-            font-size: 3.5rem;
+            font-size: 4rem;
             animation: fadeInDown 2s ease-in-out;
         }
+
         header p {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             animation: fadeInUp 2s ease-in-out;
         }
-        /* Navigation */
+
+        /* Navigation Styles */
         nav {
-            background: #003366;
+            background: rgba(0, 51, 102, 0.9);
             color: white;
             padding: 10px 0;
             text-align: center;
@@ -62,33 +91,25 @@
             top: 0;
             z-index: 1000;
         }
+
         nav a {
             color: white;
             margin: 0 15px;
             font-weight: bold;
         }
-        nav a:hover {
-            color: #ffcc00;
-        }
+
         /* About Section */
         #about {
-            background: linear-gradient(135deg, #ac9071, #b27c7c); /* تدرج بين البرتقالي والذهبي */
+            background: linear-gradient(135deg, #8bcdf4, #9cdc72);
             color: white;
-            padding: 50px 10%;
-            text-align: center;
-            border-radius: 10px; /* حواف مستديرة */
-        }
-
-        #about p {
-            font-size: 1.5rem; /* تكبير حجم الخط */
-            color: #fff; /* تغيير لون النص إلى الأبيض */
-            line-height: 1.6; /* زيادة التباعد بين الأسطر */
         }
 
         /* Skills Section */
         .skills {
-            background: #f4f4f4;
+            background: linear-gradient(135deg, #8bcdf4, #9cdc72);
+            color: rgb(79, 127, 241);
         }
+
         .skills ul {
             display: flex;
             flex-wrap: wrap;
@@ -96,6 +117,7 @@
             padding: 0;
             list-style: none;
         }
+
         .skills ul li {
             background: #003366;
             color: white;
@@ -103,16 +125,21 @@
             padding: 15px 20px;
             border-radius: 5px;
             font-size: 1rem;
-            transition: transform 0.3s;
+            transition: transform 0.3s, background 0.3s;
         }
+
         .skills ul li:hover {
             transform: scale(1.1);
+            background: #00509e;
         }
-        /* Certificates Slider */
+
+        /* Certificates Section */
         .certificates {
-            position: relative;
-            background: #fff;
+             background: linear-gradient(135deg, #8bcdf4, #9cdc72);
+            color: white;
+            padding: 50px 0;
         }
+
         .carousel {
             display: flex;
             overflow-x: auto;
@@ -120,36 +147,45 @@
             gap: 20px;
             padding: 20px;
         }
+
         .carousel img {
             scroll-snap-align: center;
             border: 2px solid #003366;
             border-radius: 10px;
             max-width: 300px;
             height: auto;
+            transition: transform 0.3s;
         }
-        .carousel::-webkit-scrollbar {
-            display: none;
+
+        .carousel img:hover {
+            transform: scale(1.05);
         }
-        /* Footer */
+
+        /* Footer Styles */
         footer {
             background: #003366;
             color: white;
             padding: 20px 0;
             text-align: center;
         }
+
         .social-links a {
             margin: 0 10px;
             color: white;
             font-size: 1.5rem;
+            transition: color 0.3s;
         }
+
         .social-links a:hover {
             color: #ffcc00;
         }
+
         /* Animations */
         @keyframes fadeInDown {
             from { opacity: 0; transform: translateY(-20px); }
             to { opacity: 1; transform: translateY(0); }
         }
+
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
@@ -158,8 +194,11 @@
 </head>
 <body>
     <header>
-        <h1>Mohamed Nasr</h1>
-        <p>Cybersecurity Enthusiast | Problem Solver | Technology Lover</p>
+        <img src="./Mohamed Nasr.jpg" alt="Mohamed Nasr" class="profile-img">
+        <div>
+            <h1>Mohamed Nasr</h1>
+            <p>Cybersecurity Enthusiast | Problem Solver | Technology Lover</p>
+        </div>
     </header>
     <nav>
         <a href="#about">About</a>
@@ -169,7 +208,7 @@
     </nav>
     <section id="about">
         <h2>About Me</h2>
-        <p>Hi! "I am a Computer Science student with a strong passion for cybersecurity, currently self-learning to enhance my skills. My goal is to become an expert in ethical hacking and penetration testing, contributing to the protection of digital systems. I am committed to continuous learning and developing a deep understanding of cybersecurity tools and methodologies".</p>
+        <p>Hi! I am a Computer Science student with a strong passion for cybersecurity, currently self-learning to enhance my skills. My goal is to become an expert in ethical hacking and penetration testing, contributing to the protection of digital systems. I am committed to continuous learning and developing a deep understanding of cybersecurity tools and methodologies.</p>
     </section>
     <section id="skills" class="skills">
         <h2>Skills</h2>
@@ -202,5 +241,22 @@
             <a href="https://www.linkedin.com/in/mohamed-nasr-103267335">LinkedIn</a>
         </div>
     </footer>
+
+    <script>
+        // Smooth scroll to sections on navigation click
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Welcome message on page load
+        window.addEventListener('load', () => {
+            alert("Welcome to my personal website! Explore my journey in Cybersecurity.");
+        });
+    </script>
 </body>
 </html>
