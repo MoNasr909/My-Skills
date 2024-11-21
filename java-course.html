@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Course - Mohamed Nasr</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General Page Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #3a7bd5, #00d2ff);
+            color: #fff;
+            line-height: 1.6;
+            overflow-x: hidden;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        header {
+            background: #003366;
+            padding: 40px 0;
+            text-align: center;
+            color: white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            transition: background 0.3s ease;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+
+        .course-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 50px;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            color: #003366;
+        }
+
+        .course-container h2 {
+            font-size: 2rem;
+            margin-top: 20px;
+            color: #003366;
+        }
+
+        .course-container p {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .course-container ul {
+            list-style-type: square;
+            margin-left: 30px;
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        .course-container li {
+            margin-bottom: 10px;
+        }
+
+        .syntax-box {
+            background-color: #f4f4f4;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.1);
+            color: #003366;
+        }
+
+        pre {
+            margin: 0;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1rem;
+            color: #003366;
+            line-height: 1.5;
+        }
+
+        .back-button {
+            background-color: #003366;
+            color: white;
+            padding: 12px 30px;
+            font-size: 1.2rem;
+            text-decoration: none;
+            border-radius: 25px;
+            display: inline-block;
+            margin-top: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .back-button:hover {
+            background-color: #00509e;
+            transform: translateY(-3px) translateX(-50%);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .back-button:active {
+            transform: translateY(1px) translateX(-50%);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background: #003366;
+            padding: 10px 0;
+            color: white;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            font-size: 0.7rem;
+        }
+
+        /* Dark Mode Styles */
+        body.dark-mode {
+            background: #2c2c2c;
+            color: #f1f1f1;
+        }
+
+        body.dark-mode header {
+            background: #1a1a1a;
+        }
+
+        body.dark-mode .course-container {
+            background: #444;
+            color: #f1f1f1;
+        }
+
+        body.dark-mode .syntax-box {
+            background-color: #555;
+            color: #f1f1f1;
+        }
+
+        body.dark-mode .back-button {
+            background-color: #555;
+            color: #fff;
+        }
+
+        body.dark-mode footer {
+            background: #1a1a1a;
+        }
+
+        .dark-mode-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #003366;
+            color: white;
+            padding: 12px;
+            font-size: 1.5rem;
+            border: none;
+            cursor: pointer;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .dark-mode-btn:hover {
+            background-color: #00509e;
+        }
+
+        .dark-mode-btn:focus {
+            outline: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    <button class="dark-mode-btn" onclick="toggleDarkMode()">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <header>
+        <h1>Java Programming</h1>
+        <p>Learn the basics and advanced features of Java programming language.</p>
+    </header>
+
+    <div class="course-container">
+        <h2>Course Overview</h2>
+        <p>This course covers core Java programming concepts, including syntax, object-oriented programming, and advanced Java features.</p>
+
+        <h3>Course Content</h3>
+        <ul>
+            <li>Introduction to Java</li>
+            <li>Variables and Data Types</li>
+            <li>Loops and Conditionals</li>
+            <li>Object-Oriented Programming in Java</li>
+            <li>Exception Handling</li>
+            <li>Java Collections</li>
+        </ul>
+
+        <h3>Example Code</h3>
+        <div class="syntax-box">
+            <pre>
+class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+            </pre>
+        </div>
+
+        <h3>Example Image</h3>
+        <img src="./Java.jpg" alt="Java Example" style="max-width: 100%; border-radius: 10px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);">
+
+        <a href="index.html" class="back-button">Back</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Mohamed Nasr. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+    const icon = document.querySelector('.dark-mode-btn i');
+    // تغيير الأيقونة بين القمر والشمس
+    if (document.body.classList.contains('dark-mode')) {
+        icon.classList.replace('fa-moon', 'fa-sun');
+    } else {
+        icon.classList.replace('fa-sun', 'fa-moon');
+    }
+}
+    </script>
+</body>
+</html>
